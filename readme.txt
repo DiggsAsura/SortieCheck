@@ -1,36 +1,36 @@
 =========================================
-SORTIECHECK - README
+SORTIECHECK - README (v1.9)
 =========================================
 
 WHAT IS SORTIECHECK?
-SortieCheck is a Windower 4 addon for Final Fantasy XI that helps you verify 
-that all party members have the correct Job/Subjob combination before 
-entering Sortie.
+SortieCheck is a Windower 4 addon for Final Fantasy XI that ensures all 
+party members have the correct Job/Subjob combinations before entering 
+Sortie.
 
 KEY FEATURES:
-- In-game overlay showing the status of all party members.
-- Automatically blocks entrance (Diaphanous Gadget) if anyone has the 
-  wrong subjob.
-- Perfect for multiboxing by syncing data between your game windows (IPC).
-- Clean, column-based layout for easy readability.
+- Visual HUD: Aligned, easy-to-read party status list.
+- Minimal Mode: Clean, single-line status display.
+- Entry Blocking: Automatically stops you from entering Sortie via the 
+  Diaphanous Gadget if anyone has the wrong subjob.
+- Multibox Sync: Shares job data between all local game windows (IPC).
+
+COMMANDS:
+//schk help     - Displays the in-game help menu.
+//schk visible  - Toggles the overlay visibility (Show/Hide).
+//schk minimal  - Toggles between Full List and Minimal Status line.
+
+MINIMAL MODE:
+When everything is correct (6/6 players with the right jobs), it displays:
+"Sortie Ready Check: READY" in green text.
+
+PREFIXES:
+Use either //schk or //sortiecheck (//sc has been removed to avoid conflicts).
 
 INSTALLATION:
 1. Create a folder named "SortieCheck" in your windower/addons directory.
 2. Place SortieCheck.lua and settings.lua inside that folder.
-3. Load the addon in-game using the command: //lua load sortiecheck
-
-HOW TO READ THE OVERLAY:
-- Green text: Everything is OK.
-- Red text: Wrong subjob detected (Entry will be blocked).
-- Grey text: The job is not defined in your configuration.
-
-COMMANDS:
-//lua load sortiecheck   - Loads the addon.
-//lua reload sortiecheck - Updates the addon (use this after changing settings).
-//lua unload sortiecheck - Stops the addon and removes the overlay.
+3. Load the addon in-game: //lua load sortiecheck
 
 CONFIGURATION (SETTINGS.LUA):
-You can change the required subjobs by opening settings.lua in a text editor.
-The default setup is:
-PLD/SCH, DNC/DRG, BRD/DRK, GEO/DRK, COR/DRK, RDM/DRK.
+Open settings.lua in a text editor to define your required job setup.
 =========================================
