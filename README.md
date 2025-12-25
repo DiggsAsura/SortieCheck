@@ -1,27 +1,32 @@
-# SortieCheck (v2.6)
+# SortieCheck (v3.4)
 
-**SortieCheck** is a Final Fantasy XI addon for the **Windower 4** platform. It verifies that all party members have the correct Job/Subjob combinations and sufficient consumables before entering **Sortie**.
+**SortieCheck** is a Final Fantasy XI addon for the **Windower 4** platform designed to ensure party readiness for **Sortie**. It monitors job setups, consumables, and inventory space across all party members using IPC.
 
 ## Features
-* **Visual HUD:** Aligned, column-based overlay for high readability.
-* **Consumable Tracking:** Real-time monitoring of Panacea, Echo Drops, Holy Water, and Remedy.
-* **Color-Coded Status:**
-    * **Items:** Green (11+), Orange (3-10), or Red (0-2).
-    * **Jobs:** Green (OK), Red (Mismatch), or Grey (Not in setup).
-* **Automatic Blocking:** Stops entry at the Diaphanous Gadget if the party is not ready.
-* **Multibox Sync:** Shares data instantly across local instances via IPC.
-* **Minimal Mode:** Toggles between a full list and a single "READY" line.
 
-## Installation
-1. Create a folder `addons/SortieCheck` in your Windower directory.
-2. Place `SortieCheck.lua` and `settings.lua` inside.
-3. Load in-game: `//lua load sortiecheck`.
+* **Detailed HUD:** Displays party status including names, job combinations, and essential item counts.
+* **Global Item Tracking:** Monitors Panacea, Echo Drops, Holy Water, Remedy, and a customizable Food item.
+* **Dual-Count Logistics:** Displays items as `Inventory (Total Owned)` to show stock across all storage bags (Sack, Satchel, Wardrobes, etc.).
+* **Inventory Monitoring:** Tracks free slots in each player's main inventory bag.
+* **Entry Security:** Automatically blocks interaction with the *Diaphanous Gadget* if subjobs are incorrect or party members are not ready.
+* **Multibox Integration:** Synchronizes data instantly between local game instances via IPC.
+
+## Color Indicators
+
+* **Items & Food:** * **Red:** 0–2 items.
+    * **Orange:** 3–10 items.
+    * **Green:** 11+ items.
+* **Inv (Free Space):** * **Red:** Less than 10 slots available.
+    * **Orange:** Less than 20 slots available.
+    * **Green:** 20 or more slots available.
+* **Jobs:** Green if matching the `settings.lua` configuration, Red if mismatched.
 
 ## Commands
-* `//schk help` - Displays the in-game help menu.
-* `//schk visible` - Toggles HUD visibility.
-* `//schk minimal` - Toggles between Full List and Minimal mode.
-* `//schk debug` - Prints current inventory counts to chat.
 
-## Columns Legend
-Name | Job/Sub | Pan (Panacea) | Echo (Echo Drops) | Holy (Holy Water) | Rem (Remedy)
+* `//schk visible` — Toggles HUD visibility.
+* `//schk minimal` — Toggles between a full detailed list and a single-line "READY" status.
+* `//schk help` — Displays the in-game help menu.
+
+## Configuration
+
+Customize your required job setups and food choice in `settings.lua`.

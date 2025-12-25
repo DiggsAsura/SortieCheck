@@ -1,26 +1,30 @@
 =========================================
-SORTIECHECK - README (v2.6)
+SORTIECHECK - README (v3.4)
 =========================================
 
 WHAT IS SORTIECHECK?
-A Windower 4 addon for FFXI that ensures your party is fully prepared 
-for Sortie by checking both job setups and consumable stocks.
+A logistical preparedness tool for Sortie that monitors party job setups, 
+consumables, and inventory space.
 
 KEY FEATURES:
-- HUD Overlay: Displays party names, jobs, and item counts (Pan, Echo, Holy, Rem).
-- Color Alerts: Items turn Red if you have 0-2 left, Orange for 3-10, and Green for 11+.
-- Entry Security: Blocks entry to Sortie if someone has the wrong subjob or the party is incomplete.
-- Multibox Ready: Syncs data instantly between all local FFXI windows using IPC.
+- Visual HUD: Shows Name, Job/Sub, Pan, Echo, Holy, Rem, Food, and Inv space.
+- Global Scan: Counts items in your main bag vs. total owned in all bags.
+- Entry Blocking: Stops you from entering Sortie if subjobs are wrong.
+- Multibox Sync: Shares data across all local FFXI windows via IPC.
+
+HUD COLUMN LEGEND:
+Name | Job/Sub | Pan | Echo | Holy | Rem | Food | Inv (Free Space)
+
+COLOR CODING:
+- Items/Food: Red (0-2), Orange (3-10), Green (11+).
+- Inv (Space): Red (<10), Orange (<20), Green (20+).
+- Jobs: Green if correct, Red if wrong.
 
 COMMANDS:
-//schk help     - Shows help menu.
-//schk visible  - Shows/Hides the overlay.
-//schk minimal  - Toggles simple "READY" or "NOT READY" mode.
-//schk debug    - Verifies item counts in the chat log.
+//schk visible   - Show or hide the HUD.
+//schk minimal   - Toggle a simple "READY" or "NOT READY" line.
+//schk help      - Show in-game help menu.
 
 INSTALLATION:
 Place files in "addons/SortieCheck" and use "//lua load sortiecheck".
-
-CONFIG:
-Modify required job/subjob combinations in settings.lua.
 =========================================
