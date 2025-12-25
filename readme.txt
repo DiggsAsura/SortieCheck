@@ -1,36 +1,26 @@
 =========================================
-SORTIECHECK - README (v1.9)
+SORTIECHECK - README (v2.6)
 =========================================
 
 WHAT IS SORTIECHECK?
-SortieCheck is a Windower 4 addon for Final Fantasy XI that ensures all 
-party members have the correct Job/Subjob combinations before entering 
-Sortie.
+A Windower 4 addon for FFXI that ensures your party is fully prepared 
+for Sortie by checking both job setups and consumable stocks.
 
 KEY FEATURES:
-- Visual HUD: Aligned, easy-to-read party status list.
-- Minimal Mode: Clean, single-line status display.
-- Entry Blocking: Automatically stops you from entering Sortie via the 
-  Diaphanous Gadget if anyone has the wrong subjob.
-- Multibox Sync: Shares job data between all local game windows (IPC).
+- HUD Overlay: Displays party names, jobs, and item counts (Pan, Echo, Holy, Rem).
+- Color Alerts: Items turn Red if you have 0-2 left, Orange for 3-10, and Green for 11+.
+- Entry Security: Blocks entry to Sortie if someone has the wrong subjob or the party is incomplete.
+- Multibox Ready: Syncs data instantly between all local FFXI windows using IPC.
 
 COMMANDS:
-//schk help     - Displays the in-game help menu.
-//schk visible  - Toggles the overlay visibility (Show/Hide).
-//schk minimal  - Toggles between Full List and Minimal Status line.
-
-MINIMAL MODE:
-When everything is correct (6/6 players with the right jobs), it displays:
-"Sortie Ready Check: READY" in green text.
-
-PREFIXES:
-Use either //schk or //sortiecheck (//sc has been removed to avoid conflicts).
+//schk help     - Shows help menu.
+//schk visible  - Shows/Hides the overlay.
+//schk minimal  - Toggles simple "READY" or "NOT READY" mode.
+//schk debug    - Verifies item counts in the chat log.
 
 INSTALLATION:
-1. Create a folder named "SortieCheck" in your windower/addons directory.
-2. Place SortieCheck.lua and settings.lua inside that folder.
-3. Load the addon in-game: //lua load sortiecheck
+Place files in "addons/SortieCheck" and use "//lua load sortiecheck".
 
-CONFIGURATION (SETTINGS.LUA):
-Open settings.lua in a text editor to define your required job setup.
+CONFIG:
+Modify required job/subjob combinations in settings.lua.
 =========================================
